@@ -5,3 +5,8 @@ why we use Routes ?
   It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page.
   It also allows us to use browser history features while preserving the right application view. A Router in 
   React JS routes using a component-based architecture.
+
+  here we will using hooks .
+
+  we know that whwn usestste hook use it will return us a array
+  at first index have variable and second index has function that will change that variable
