@@ -1,0 +1,79 @@
+.post{
+    
+    width: 80%;
+    background-color: gray;
+    border-color: 8px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+   
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* cursor: pointer; */
+    
+}
+
+.blog-section{
+    text-align: left;
+    color: aliceblue;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: rgb(0, 255, 242);
+    
+}
+
+.custom-link:hover{
+    color: rgb(255, 94, 0);
+    
+}
+.custom-link h3:hover{
+    text-decoration: underline;
+}
+
+.post #message {
+    display: none;
+}
+.post:hover #message {
+    display: block;
+    color: white;
+}
+
+.btn-ctn{
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#delete-btn {
+    color: black;
+    background-color: lightcoral;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    margin-left: 20%;
+  }
+  #delete-btn:hover {
+    background-color: rgb(226, 151, 151);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #update-btn {
+    color: black;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+  }
+  #update-btn:hover {
+    background-color: rgb(113, 194, 235);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }

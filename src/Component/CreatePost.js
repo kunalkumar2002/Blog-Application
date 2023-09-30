@@ -15,9 +15,9 @@ function CreatePost(){
 
         e.preventDefault();
 
-        console.log('title' , title);
-        console.log('subtitle' , subtitle);
-        console.log('content' , content);
+        // console.log('title' , title);
+        // console.log('subtitle' , subtitle);
+        // console.log('content' , content);
 
         // db.collection('post').add({
         //     title: title.value,

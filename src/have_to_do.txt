@@ -25,3 +25,17 @@ await setDoc(doc(db, "cities", "LA"), {
 }); 
 
 this method To create or overwrite a single document,use the following language-specific set() methods:
+
+
+so Get all documents in a collection
+In addition, you can retrieve all documents in a collection by omitting the where() filter entirely:
+
+Web modular API 
+
+import { collection, getDocs } from "firebase/firestore";
+
+const querySnapshot = await getDocs(collection(db, "cities"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
