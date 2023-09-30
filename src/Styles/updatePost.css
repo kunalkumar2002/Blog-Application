@@ -30,18 +30,15 @@
     padding-top: 5px;
   }
   .update-post-btn {
-    height: 33px;
-    background: #319ddb;
-    border: 2px solid black;
-    color: #fff;
-    padding: 8px;
-    font-size: 15px;
-    border-radius: 3px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 10PX;
+    color: black;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
   }
   .update-post-btn:hover {
     text-decoration: underline;
-    background: #7ebce0;
+    background: black;
+    color: white;
   }

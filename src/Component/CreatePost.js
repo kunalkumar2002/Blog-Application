@@ -3,12 +3,14 @@ import "../Styles/create-post.css"
 import { db } from '../firebase'
 import { doc, setDoc , collection } from "firebase/firestore"; 
 import { useFormInput } from "./Hooks"
+import { useNavigate } from "react-router-dom";
 
 function CreatePost(){
 
     const title  = useFormInput(``);
     const subtitle  = useFormInput(``);
     const content  = useFormInput(``);
+    const navigate = useNavigate();
 
 
     const handleSubmit = async (e)=>{
@@ -42,6 +44,8 @@ function CreatePost(){
             title.onChange({ target: { value: '' } });
             subtitle.onChange({ target: { value: '' } });
             content.onChange({ target: { value: '' } });
+
+            navigate(`/`)
             
         } catch (error) {
             console.error("Error adding document: ", error);
