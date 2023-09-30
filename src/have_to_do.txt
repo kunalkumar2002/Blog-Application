@@ -39,3 +39,16 @@ querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
   console.log(doc.id, " => ", doc.data());
 });
+
+****Note 
+
+for geting id from link we can use useParams
+
+for that 
+
+import {useParams} from "react-router-dom"
+
+//it will give us an object so we have to destructure it using curly brases {}
+
+
+const { postId } = useParams();

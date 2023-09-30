@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { db } from '../firebase';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { doc , deleteDoc } from 'firebase/firestore';
+
 import "../Styles/home.css"
 
 
@@ -10,6 +11,7 @@ import "../Styles/home.css"
 
 function Home() {
     const [posts, setPosts] = useState([]);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -46,11 +48,12 @@ function Home() {
     }
 
     const handleUpdate = (e) =>{
-        console.log(e);
+        //console.log(e); 
+        navigate(`/updatePost/${e}`)
     }
 
     const handleDelete = async (e) => {
-        console.log("delete button pressed",e)
+       // console.log("delete button pressed",e)
         // through this method we can on delete task on localy but after refreshing all task againg get reloded from cloud
 
         // posts.splice(e , 1);
@@ -85,7 +88,7 @@ function Home() {
                         <div id="message">Click on the blog title to read the post</div>
 
                         <div className="btn-ctn">
-                            <button id="update-btn"  onClick={handleUpdate}>
+                            <button id="update-btn"  onClick={() => handleUpdate(post.id)}>
                             Update
                             </button>
                             <button id="delete-btn" onClick={() => handleDelete(index)}>
