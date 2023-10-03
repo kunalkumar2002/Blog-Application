@@ -1,6 +1,6 @@
 /* CreatePost.css */
 
-.create-post {
+.createPost {
     background-color: #f0f0f0;
     padding: 20px;
     border: 1px solid #ccc;
@@ -10,19 +10,19 @@
     margin: 0 auto;
   }
   
-  .create-post h1 {
+  .createPost h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-   .form-feald {
+   .formfeald {
     display: flex;
     flex-direction: column;
     text-align: start;
     margin-bottom: 10px;
   }
   
-  .form-input {
+  .formInput {
     margin-bottom: 10px;
   }
 

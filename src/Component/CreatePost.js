@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import "../Styles/create-post.css"
+import styles from "../Styles/createPost.module.css"
 import { db } from '../firebase'
 import { doc, setDoc , collection } from "firebase/firestore"; 
 import { useFormInput } from "./Hooks"
@@ -56,10 +56,10 @@ function CreatePost(){
 
     return (
         
-        <div className="create-post">
+        <div className={styles.createPost}>
            <h1>Create Post</h1>
 
-            <form className="form-feald" onSubmit={handleSubmit}>
+            <form className={styles.formfeald} onSubmit={handleSubmit}>
                 <div className="form-input">
                     <label>Your Name</label>
                     <input 
@@ -70,7 +70,7 @@ function CreatePost(){
                     />
                 </div>
 
-                <div className="form-input">
+                <div className={styles.formInput}>
                     <label>Post Title</label>
                     <input 
                         // value={subtitle}
@@ -80,7 +80,7 @@ function CreatePost(){
                     />
                 </div>
 
-                <div className="form-input">
+                <div className={styles.formInput}>
                     <label>Post Description</label>
                     
                     <textarea
@@ -91,7 +91,7 @@ function CreatePost(){
                     />
                 </div>
 
-                <button className="submit"> submit post</button>
+                <button className={styles.submit}> submit post</button>
 
             </form>
 
