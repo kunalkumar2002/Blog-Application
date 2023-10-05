@@ -3,9 +3,15 @@ import { db } from '../firebase';
 import { Link, useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { doc , deleteDoc } from 'firebase/firestore';
+import styled from 'styled-components';
 
 import "../Styles/home.css"
 
+//using styled component hare we can also put media queries here also nest this
+
+const BlogHeading = styled.h1`
+    color : red;
+`;
 
 
 
@@ -71,9 +77,18 @@ function Home() {
 
     }
 
+    if (posts.length === 0) {
+        return (
+          <div className="home">
+            <BlogHeading>Blog Web App</BlogHeading>
+            <h1>Click on the Create Post to Create Blogs</h1>
+          </div>
+        );
+      }
+
     return (
         <div className="home">
-            <h1>Blog Web App</h1>
+            <BlogHeading>Blog Web App</BlogHeading>
             {
                 posts.map((post, index) => (
                     <div className='post' key={index}>
